@@ -8,9 +8,10 @@ const requireSignin = passport.authenticate('local', {session : false});
 module.exports = function(app){
   app.post('/signup', Authentication.signup);
   app.post('/signin', requireSignin, Authentication.signin);
-
+  
+  //This route is protected and need a JWT token
   app.get('/', requireAuth, function(req, res){
-    res.send({hi: 'there'});
+    res.send({message: 'Super Secret Message'});
   });
 
 }
