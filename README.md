@@ -8,7 +8,7 @@ Application used to manage real estate properties
 -tennant payment
 
 ---
----
+
 
 ##Auth Server
 -create a file called config.js at top level dir
