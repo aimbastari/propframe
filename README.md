@@ -11,10 +11,13 @@ Application used to manage real estate properties
 
 ##Auth Server
 -create a file called config.js at top level dir
+
+```
 //Hold application secrets and config
 module.exports = {
   secret: 'YOUR SEQUENCE OF ALPHANUMNERIC CHARACTERS'
 };
+```
 
 ##UI
 
