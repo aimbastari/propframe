@@ -4,13 +4,13 @@ import { Component } from 'react';
 import { Link } from 'react-router';
 
 class Header extends Component {
-           
+
     renderLinks(){
         if (this.props.authenticated){
             return(
-                <li className="nav-item"><Link className="nav-link" to="/signout">sign out</Link></li>
+                <li className="ui right floated"><Link className="nav-link" to="/signout">sign out</Link></li>
             );
-            
+
         }else{
             return (
                 [
@@ -18,27 +18,30 @@ class Header extends Component {
                     <li className="nav-item" key={2}><Link className="nav-link" to="/signup">sign up</Link></li>
                 ]
             );
-        }        
-    }  
-    
+        }
+    }
+
     render() {
         return (
-            <nav className = "navbar navbar-light" >
-                <Link to="/" className="navbar-brand">PropFrame</Link>
-                <ul className="nav navbar-nav">
+            <div className="ui container">
+            <nav className="ui inverted segment" >
+                <Link to="/" className="ui standard inverted header">
+                  <i className="orange building icon"> </i>
+                  PROP FRAME
+                </Link>
+                <ul className="ui right floated">
                     {this.renderLinks()}
                 </ul>
-            </nav> 
+            </nav>
+            </div>
         );
     }
 }
 
 function mapStateToProps(state) {
     return {
-        authenticated : state.auth.authenticated 
-    }; 
+        authenticated : state.auth.authenticated
+    };
 }
 
 export default connect(mapStateToProps)(Header);
-
-

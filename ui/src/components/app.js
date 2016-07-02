@@ -6,7 +6,7 @@ import SignIn from './auth/signin.js';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="ui container">
         <Header />
         {this.props.children}
        </div>
