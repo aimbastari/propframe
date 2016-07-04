@@ -8,14 +8,14 @@ class Header extends Component {
     renderLinks(){
         if (this.props.authenticated){
             return(
-                <li className="ui right floated"><Link className="nav-link" to="/signout">sign out</Link></li>
+                <div className="link item"><Link to="/signout">sign out</Link></div>
             );
 
         }else{
             return (
                 [
-                    <li className="nav-item" key={1}><Link className="nav-link" to="/signin">sign in</Link></li>,
-                    <li className="nav-item" key={2}><Link className="nav-link" to="/signup">sign up</Link></li>
+                    <div className="link item" key={1}><Link to="/signin">sign in</Link></div>,
+                    <div className="link item" key={2}><Link to="/signup">sign up</Link></div>
                 ]
             );
         }
@@ -23,16 +23,14 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="ui container">
-            <nav className="ui inverted segment" >
-                <Link to="/" className="ui standard inverted header">
+            <div className="ui segment" >
+                <Link to="/" className="ui grey header">
                   <i className="orange building icon"> </i>
                   PROP FRAME
                 </Link>
-                <ul className="ui right floated">
+                <div className="ui mini right floated menu">
                     {this.renderLinks()}
-                </ul>
-            </nav>
+                </div>
             </div>
         );
     }
