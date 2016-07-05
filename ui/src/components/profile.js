@@ -12,7 +12,7 @@ class Profile extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ui segment">
         Profile page
       </div>
     );

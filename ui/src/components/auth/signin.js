@@ -27,7 +27,7 @@ class Signin extends Component{
         const { handleSubmit, fields: { email, password}} = this.props;
 
         return (
-          <div className="ui center aligned grid">
+          <div id="signIn" className="ui center aligned grid">
             <div className="column">
               <h4 className="ui left aligned  grey header">
                 Sign-in to your account

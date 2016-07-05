@@ -14,13 +14,29 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div>
-        Super secret Dashboard
-        <div>
-          {this.props.dashboard}
+      <div className="ui segment">
+        <div className="ui  breadcrumb">
+          <a className="section">Home</a>
+          <i className="right chevron icon divider"></i>
+          <a className="section">Registration</a>
+          <i className="right chevron icon divider"></i>
+          <div className="active section">Personal Information</div>
         </div>
-        <Menu />
-        {this.props.children}
+
+        <div className="ui stackable grid container">
+          <div className="four wide column">
+            <Menu />
+          </div>
+          <div className="eight wide column">
+            {this.props.children}
+          </div>
+          <div className="four wide column">
+            <div className="ui segment">
+              {this.props.dashboard}
+             </div>
+          </div>
+        </div>
+
       </div>
     );
   }

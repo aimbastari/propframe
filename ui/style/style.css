@@ -2,6 +2,6 @@
     color: RED;
 }
 
-.column {
-  max-width: 450px;
+#signIn>div{
+  max-width: 300px;
 }
