@@ -5,11 +5,17 @@ const bcrypt = require('bcrypt-nodejs');
 //Define the User model
 const userSchema = new Schema({
   email: {type : String, unique : true, lowercase : true },
-  password: String
+  password: String,
+  firstName: String,
+  lastName: String,
+  middleName: String,
+  roles: [String],
+  address: [String],
+  phones: {type: Array, "default": []}
 });
 
 //Called before a save operation on a User.
-//Encrypts the password using bcrypt 
+//Encrypts the password using bcrypt
 userSchema.pre('save', function (next) {
   //get access to the user model
   const user = this;
