@@ -8,13 +8,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel'
-    }]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
+    loaders: require('./loaders.config')
   },
   devServer: {
     historyApiFallback: true,

@@ -3,10 +3,10 @@ import { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../actions';
 
-class Profile extends Component {
+class EmploymentHistory extends Component {
 
   componentWillMount(){
-    this.props.getProfile();
+    this.props.getEmploymentHistory();
 
   }
 
@@ -66,6 +66,6 @@ function mapStateToProps(state){
 }
 
 export default reduxForm({
-    form: 'profileForm',
+    form: 'EmploymentHistoryForm',
     fields: ['firstName', 'lastName', 'address', 'state', 'zipCode']
 }, mapStateToProps, actions)(Profile);

@@ -3,10 +3,10 @@ import { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../actions';
 
-class Profile extends Component {
+class LocationHistory extends Component {
 
   componentWillMount(){
-    this.props.getProfile();
+    this.props.getRentalHistory();
 
   }
 

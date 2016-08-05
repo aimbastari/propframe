@@ -15,6 +15,14 @@ import Signup from './components/auth/signup';
 import Dashboard from './components/dashboard';
 import Profile from './components/profile';
 import References from './components/references';
+import CreditReports from './components/creditreports';
+
+
+import Application from './components/application';
+import ApplicationTab from './components/application_rc_tabs';
+
+
+import ApplicationList from './components/application_list';
 
 
 import RequireAuth from './components/auth/require_auth';
@@ -40,8 +48,13 @@ ReactDOM.render(
         <Route path="signup" component={Signup} />
 
         <Route path="dashboard" component={RequireAuth(Dashboard)}>
-          <Route path="/profile" component={RequireAuth(Profile)} />
-          <Route path="/references" component={RequireAuth(References)} />
+        <Route path="/profile" component={RequireAuth(Profile)} />
+        <Route path="/references" component={RequireAuth(References)} />
+        <Route path="/creditreports" component={RequireAuth(CreditReports)} />
+
+        <Route path="/applications" component={RequireAuth(ApplicationList)} />
+        <Route path="/applications/:id" component={RequireAuth(ApplicationTab)} />
+
 
         </Route>
 

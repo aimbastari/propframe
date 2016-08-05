@@ -7,8 +7,14 @@ class Header extends Component {
 
     renderLinks(){
         if (this.props.authenticated){
+          debugger;
+          const firstName = localStorage.getItem("firstName");
+
             return(
-                <div className="link item"><Link to="/signout">sign out</Link></div>
+              [
+                  <div className="link item" key={1}><Link to="/signout">welcome, {firstName}</Link></div>,
+                  <div className="link item" key={2}><Link to="/signout">sign out</Link></div>
+              ]
             );
 
         }else{
