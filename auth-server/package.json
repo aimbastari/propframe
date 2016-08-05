@@ -1,7 +1,7 @@
 {
-  "name": "auth-server",
+  "name": "prop-frame-server",
   "version": "1.0.0",
-  "description": "an authentication server using node.js and mongodb",
+  "description": "api server using node.js and mongodb",
   "main": "index.js",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -16,11 +16,16 @@
     "passport-jwt": "^2.0.0",
     "passport-local": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "debug": "nodemon --debug=5858 index.js"
+    "debug": "nodemon --debug=5858 index.js",
+    "seed" : "nodemon ./seed/seed.js",
+    "seed-debug" : "nodemon --debug=5858 ./seed/seed.js"
+
   },
   "author": "",
   "license": "ISC"
